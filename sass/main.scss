@@ -1,0 +1,17 @@
+// customize variables
+$primary: #C1993B;
+
+//add new theme colors by creating new theme-colors-map
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colours: ( // the '()' define it's a map
+    "altlight": #f2ebfa,
+    "altdark": #522192,
+);
+
+// function that merges the two maps into a new map
+$theme-colors: map-merge($custom-theme-colours, $theme-colors);
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";  
